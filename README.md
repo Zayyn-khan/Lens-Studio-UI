@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Static-E-Commerce-Layout-with-AngularJS
 A modern static e-commerce front-end design using AngularJS to showcase products effectively.
 =======
@@ -64,3 +65,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 >>>>>>> d0a8194 (first data)
+=======
+# Lens-Studio-UI
+Make E-Commerce Products UI with the help of Angular with TSX
+>>>>>>> 6166688a6af175eb990406630539c5a81d2a5485
