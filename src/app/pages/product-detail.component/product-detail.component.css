@@ -1,0 +1,143 @@
+/* PAGE WRAPPER */
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8f8f8;
+}
+
+/* MAIN CARD */
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE BOX */
+.image-box {
+  width: 100%;
+  height: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE ITSELF */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* 🔥 MOST IMPORTANT */
+}
+
+/* DETAILS */
+.details-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TITLE ROW */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* WISHLIST */
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* RATING */
+.rating span {
+  font-size: 22px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.rating span.active {
+  color: gold;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 15px;
+  color: #555;
+}
+
+/* PRICE */
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* QUANTITY */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quantity-box button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #ffd700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ADD TO CART */
+.add-btn {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: #000;
+  color: #ffd700;
+  cursor: pointer;
+}
+
+/* MINI CART */
+.mini-cart {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #000;
+  color: #ffd700;
+  padding: 14px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+
+  .image-box {
+    height: 300px;
+  }
+}

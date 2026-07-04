@@ -1,0 +1,38 @@
+<section class="new-arrivals-wrapper page-animate">
+
+  <!-- Heading -->
+  <div class="intro animate__animated animate__fadeInDown">
+    <h1>New Arrivals</h1>
+    <p class="tagline animate__animated animate__fadeInUp animate__delay-1s">
+      Premium sunglasses designed to elevate your vision & style.
+    </p>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+
+    @for (item of products; track item) {
+      <div class="product-card animate__animated animate__fadeInUp">
+
+        <div class="img-wrap">
+          <img [src]="item.image" [alt]="item.name" />
+          <span class="badge">Coming Soon</span>
+        </div>
+
+        <div class="card-content">
+          <h3>{{ item.name }}</h3>
+
+          <p class="description">
+            Premium UV-protected sunglasses with modern frames,
+            lightweight comfort, and a luxury finish.
+          </p>
+
+          <p class="price">$ {{ item.price }}</p>
+        </div>
+
+      </div>
+    }
+
+  </div>
+
+</section>

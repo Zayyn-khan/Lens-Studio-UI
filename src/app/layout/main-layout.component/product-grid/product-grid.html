@@ -1,0 +1,13 @@
+<div class="cards-container">
+  <div class="card" *ngFor="let item of products">
+    <img [src]="item.image" alt="{{ item.name }}" />
+
+    <div class="card-body">
+      <div class="title">{{ item.name }}</div>
+      <div class="description">Premium eyewear</div>
+      <div class="price">PKR {{ item.price }}</div>
+      <button class="btn" (click)="goToProduct(item.id)">Buy Now</button>
+
+    </div>
+  </div>
+</div>

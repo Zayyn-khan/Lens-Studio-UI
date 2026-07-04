@@ -1,0 +1,104 @@
+.hero-slider {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* SLIDE BASE */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlider 24s infinite;
+  will-change: opacity;
+}
+
+/* IMAGES */
+.slide1 {
+  background-image: url('https://images.unsplash.com/photo-1577803645773-f96470509666?q=80&w=870&auto=format&fit=crop');
+  animation-delay: 0s;
+}
+.slide2 {
+  background-image: url('https://images.unsplash.com/photo-1698808342955-500cb9b9a25e?q=80&w=871&auto=format&fit=crop');
+  animation-delay: 6s;
+}
+.slide3 {
+  background-image: url('https://images.unsplash.com/photo-1530707114297-4af4b3cafe16?q=80&w=876&auto=format&fit=crop');
+  animation-delay: 12s;
+}
+.slide4 {
+  background-image: url('https://images.unsplash.com/photo-1759910546804-68fd991aceac?q=80&w=919&auto=format&fit=crop');
+  animation-delay: 18s;
+}
+
+/* DARK OVERLAY */
+.hero-slider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding: 0 60px;
+  animation: slideLeft 1.2s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  color: #fff;
+}
+.hero-content span {
+  color: gold;
+}
+.hero-content p {
+  color: #eee;
+  margin: 20px 0;
+  font-size: 18px;
+}
+.hero-content button {
+  padding: 14px 36px;
+  background: gold;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-content button:hover {
+  background: #fff;
+  transform: translateY(-4px);
+}
+
+/* FADE ANIMATION */
+@keyframes fadeSlider {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  25%  { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* TEXT ANIMATION */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}

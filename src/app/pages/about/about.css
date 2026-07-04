@@ -1,0 +1,84 @@
+:host {
+  display: block;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* BANNER */
+.banner {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1727091506038-5451111dc2fb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+    center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: gold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+.history-card {
+  background: #111;
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid gold;
+}
+
+:host {
+  display: block;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  animation: pageFade 0.9s ease-in-out;
+}
+
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 6%;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="product-wrapper" *ngIf="product">
+
+  <div class="product-card">
+
+    <!-- IMAGE -->
+    <div class="image-box">
+      <img [src]="product.image" alt="{{ product.name }}">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="details-box">
+
+      <!-- TITLE + WISHLIST -->
+      <div class="title-row">
+        <h1 class="title">{{ product.name }}</h1>
+        <button class="wishlist-btn" (click)="toggleWishlist()">
+          ❤️
+        </button>
+      </div>
+
+      <!-- ⭐ RATING -->
+      <div class="rating">
+        <span *ngFor="let star of [1,2,3,4,5]"
+              (click)="setRating(star)"
+              [class.active]="star <= rating">
+          ★
+        </span>
+      </div>
+
+      <p class="description">{{ product.description }}</p>
+
+      <div class="price">PKR {{ product.price }}</div>
+
+      <!-- ➕ QUANTITY -->
+      <div class="quantity-box">
+        <button (click)="decreaseQty()">−</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increaseQty()">+</button>
+      </div>
+
+      <!-- ADD TO CART -->
+      <button class="add-btn" (click)="addToCart()">
+        Add to Cart
+      </button>
+
+    </div>
+  </div>
+
+  <!-- 🛒 MINI CART POPUP -->
+  <div class="mini-cart" *ngIf="showMiniCart">
+    ✅ Added to cart
+  </div>
+
+</div>

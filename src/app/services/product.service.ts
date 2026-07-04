@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Product } from '../models/product.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  private productApi = 'http://localhost:4000/products';
+
+  constructor(private http: HttpClient) {}
+
+  // 🔹 Get all products
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productApi);
+  }
+
+  // 🔹 Get single product by ID
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.productApi}/${id}`);
+  }
+}

@@ -1,0 +1,10 @@
+<div class="checkout-page">
+  <div class="checkout-card">
+    <input placeholder="Name" [(ngModel)]="form.name" />
+    <input placeholder="Email" [(ngModel)]="form.email" />
+    <input placeholder="Phone" [(ngModel)]="form.phone" />
+    <textarea placeholder="Address" [(ngModel)]="form.address"></textarea>
+
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.topbar {
+  background: #000;
+  color: #d4af37;
+}
+
+.social-icon {
+  color: #d4af37;
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+.navbar {
+  height: 80px;
+}
